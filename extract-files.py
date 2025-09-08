@@ -9,9 +9,18 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'device/xiaomi/sm6225-common',
+    'hardware/qcom-caf/sm6225',
+    'hardware/xiaomi',
+    'vendor/xiaomi/sm6225-common',
+    'vendor/qcom/opensource/commonsys-intf/display',
+]
+
 module = ExtractUtilsModule(
     'sapphire',
     'xiaomi',
+    namespace_imports=namespace_imports,
     check_elf=False,
 )
 
